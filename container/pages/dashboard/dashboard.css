@@ -1,0 +1,57 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-primary: #5272da;
+    --light-color: #edf2f4;
+    --light-primary: #6f89ca;
+}
+
+section{
+    background: url('../../../assets/img/bg-blur-dashboard.svg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+section>.navbar {
+    background-color: rgba(111, 137, 202, 0.15);
+    box-shadow: 0 0 32px #fff;
+}
+
+section>.navbar>.container>.navbar-brand>img{
+    margin-top: -1rem;
+}
+
+section>.navbar>.container>.navbar-brand>p{
+    color: var(--bg-primary);
+}
+
+section>.navbar>.container>.navbar-brand>p>span{
+    color: var(--light-primary);
+}
+
+section>.navbar>.container>.nav-link>ul>li{
+    list-style: none;
+}
+
+section>.navbar>.container>.nav-link>ul>li>a{
+    font-size: 18px;
+    font-weight: 400 !important;
+    color: var(--light-primary);
+}
+
+section>.navbar>.container>.nav-link>ul>li>div{
+    height: .2rem;
+    width: 80%;
+    background-color: var(--light-primary);
+    border-radius: 5rem;
+}
