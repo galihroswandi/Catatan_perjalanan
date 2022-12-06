@@ -1,0 +1,112 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-primary: #5272da;
+    --light-color: #edf2f4;
+    --light-primary: #6f89ca;
+}
+
+section {
+    background: url("../../../assets/img/bg-blur-dashboard.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    padding-bottom: 5rem;
+}
+
+section>.navbar {
+    background-color: rgba(111, 137, 202, 0.15);
+    box-shadow: 0 0 32px #fff;
+}
+
+section>.navbar>.container>.navbar-brand>img {
+    margin-top: -1rem;
+}
+
+section>.navbar>.container>.navbar-brand>p {
+    color: var(--bg-primary);
+}
+
+section>.navbar>.container>.navbar-brand>p>span {
+    color: var(--light-primary);
+}
+
+section>.navbar>.container>.nav-link>ul>li {
+    list-style: none;
+}
+
+section>.navbar>.container>.nav-link>ul>li>a {
+    font-size: 18px;
+    font-weight: 400 !important;
+    color: var(--light-primary);
+}
+
+section>.navbar>.container>.nav-link>ul>li>div {
+    height: 0.2rem;
+    width: 80%;
+    background-color: var(--light-primary);
+    border-radius: 5rem;
+}
+
+main>.container>.form-wrapper {
+    min-height: 50vh;
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: rgba(111, 137, 202, 0.2);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
+    border-radius: 10px 10px 40px 40px;
+}
+
+main>.container>.form-wrapper>.header {
+    background: rgba(82, 114, 218, 0.2);
+    border-radius: 10px 10px 40px 40px;
+    padding: 0.6rem 0;
+}
+
+main>.container>.form-wrapper>.header>h1 {
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--light-primary);
+}
+
+main>.container>.form-wrapper>.main>form>div {
+    width: 50%;
+    margin: 2rem auto;
+}
+
+main>.container>.form-wrapper>.main>form>div>.form-input>input {
+    width: 30rem;
+    border: none !important;
+    outline: none;
+    border-radius: 0.8rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: .8rem;
+    color: var(--bg-primary);
+    font-size: 1.1em;
+    box-shadow: 0 0 .2rem var(--light-primary);
+}
+
+main>.container>.form-wrapper>.main>form>div>.form-input>input::placeholder {
+    color: rgba(82, 114, 218, 0.65);
+}
+
+main>.container>.form-wrapper>.main>form>div>.form-input:nth-child(5) {
+    width: 120%;
+}
+
+main>.container>.form-wrapper>.main>form>div>.form-input:nth-child(5)>button {
+    background-color: var(--bg-primary);
+}
+
+main>.container>.form-wrapper>.main>form>div>.form-input:nth-child(5)>a {
+    background-color: var(--light-primary);
+}

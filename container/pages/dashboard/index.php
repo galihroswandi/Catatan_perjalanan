@@ -38,15 +38,30 @@
                             <div></div>
                         </li>
                         <li>
-                            <a href="#" class="text-decoration-none">Perjalanan</a>
+                            <a href="./../perjalanan/" class="text-decoration-none">Perjalanan</a>
                         </li>
                         <li>
-                            <a href="#" class="text-decoration-none">Isi Data</a>
+                            <a href="../isi_data/" class="text-decoration-none">Isi Data</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 my-auto">
+                        <h1 class="d-flex flex-column flex-start fw-bold">Peduli Diri <span class="fw-normal">Catatan Perjalanan</span></h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus expedita saepe in veniam, velit nostrum labore aspernatur voluptatibus enim deleniti at libero quam mollitia! Quos dignissimos cupiditate incidunt inventore cumque sed ratione, doloremque nobis veritatis neque est earum cum aliquam obcaecati. Molestiae quas vel recusandae corporis quibusdam doloribus cupiditate? Sunt!</p>
+                        <a href="./../perjalanan/" class="btn text-white py-2 px-4 fs-6">Explore</a>
+                    </div>
+                    <div class="col-6">
+                        <img src="../../../assets/img/flat-design.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </main>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peduli Diri | Login</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Peduli Diri | Signup</title>
+    <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 
     <!-- Font Google -->
@@ -23,7 +23,7 @@
             </div>
             <div class="body mt-4">
                 <div class="container">
-                    <form action="./config/login/index.php" method="POST">
+                    <form action="./../../../config/signup/index.php" method="POST">
                         <div class="mb-4 d-flex flex-column  align-items-center">
                             <input class="px-4 py-3" id="inputNik" type="text" placeholder="NIK" name="nik" autocomplete="off" />
                         </div>
@@ -34,10 +34,10 @@
                             <div class="container-fluid">
                                 <div class="row mx-1">
                                     <div class="col-8">
-                                        <a href="container/pages/signup/" type="submit" class="btn btn-primary py-2 px-3 fw-normal">Saya Pengguna Baru</a>
+                                        <a href="../../../index.php" type="submit" class="btn btn-primary py-2 px-5 fw-normal">Login</a>
                                     </div>
                                     <div class="col-3">
-                                        <button type="submit" class="btn btn-primary py-2 px-5 fw-normal">Login</button>
+                                        <button type="submit" class="btn btn-primary py-2 px-5 fw-normal">Daftar</button>
                                     </div>
                                 </div>
                             </div>
