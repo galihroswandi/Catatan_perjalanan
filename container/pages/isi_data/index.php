@@ -62,16 +62,16 @@
                     <form action="../../../config/isi_data/index.php" method="POST">
                         <div class="d-flex flex-column align-items-center d-grid gap-3"> 
                             <div class="form-input">
-                                <input type="date" name="tanggal" id="tanggal" placeholder="Tanggal" class="py-3 px-4">
+                                <input type="date" name="tanggal" id="tanggal" placeholder="Tanggal" class="py-3 px-4" autocomplete="off">
                             </div>
                             <div class="form-input">
                                 <input type="text" name="jam" id="jam" placeholder="Jam" class="py-3 px-4">
                             </div>
                             <div class="form-input">
-                                <input type="text" name="lokasi" id="lokasi" placeholder="Lokasi Yang Dikunjungi" class="py-3 px-4">
+                                <input type="text" name="lokasi" id="lokasi" placeholder="Lokasi Yang Dikunjungi" class="py-3 px-4" autocomplete="off">
                             </div>
                             <div class="form-input">
-                                <input type="text" name="suhu-tubuh" id="suhu-tubuh" placeholder="Suhu Tubuh" class="py-3 px-4">
+                                <input type="text" name="suhu-tubuh" id="suhu-tubuh" placeholder="Suhu Tubuh" class="py-3 px-4" autocomplete="off">
                             </div>
                             <div class="form-input mt-4 d-flex d-grid gap-3">
                                 <button type="submit" class="btn text-white py-2 px-4">Simpan</button>

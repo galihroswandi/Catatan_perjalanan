@@ -10,7 +10,7 @@ if ($_POST) {
 
     if (mysqli_num_rows($query) > 0) {
         $dataUser = mysqli_fetch_assoc($query);
-        $_SESSION['users'] = hash('ripemd128', $dataUser['id_user']);
+        $_SESSION['user'] = $dataUser['id_user'];
         echo "<script>
             document.location.href = './../../container/pages/dashboard/index.php';
         </script>";
