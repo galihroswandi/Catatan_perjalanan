@@ -1,3 +1,17 @@
+<?php
+include "../../../config/config.php";
+session_start();
+
+$id_user = mysqli_real_escape_string($conn, $_SESSION['id_user']);
+$query = "SELECT * FROM catatan_perjalanan WHERE id_user='{$id_user}'";
+$sql = mysqli_query($conn, $query);
+$data = [];
+while ($result = mysqli_fetch_assoc($sql)) {
+    $data[] = $result;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,48 +98,21 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="px-5 py-2">1</td>
-                                            <td class="px-5 py-2">20/90/2022</td>
-                                            <td class="px-5 py-2">8.29</td>
-                                            <td class="px-5 py-2">35</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="px-5 py-2">1</td>
-                                            <td class="px-5 py-2">20/90/2022</td>
-                                            <td class="px-5 py-2">8.29</td>
-                                            <td class="px-5 py-2">35</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="px-5 py-2">1</td>
-                                            <td class="px-5 py-2">20/90/2022</td>
-                                            <td class="px-5 py-2">8.29</td>
-                                            <td class="px-5 py-2">35</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="px-5 py-2">1</td>
-                                            <td class="px-5 py-2">20/90/2022</td>
-                                            <td class="px-5 py-2">8.29</td>
-                                            <td class="px-5 py-2">35</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="px-5 py-2">1</td>
-                                            <td class="px-5 py-2">20/90/2022</td>
-                                            <td class="px-5 py-2">8.29</td>
-                                            <td class="px-5 py-2">35</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="px-5 py-2">1</td>
-                                            <td class="px-5 py-2">20/90/2022</td>
-                                            <td class="px-5 py-2">8.29</td>
-                                            <td class="px-5 py-2">35</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="px-5 py-2">1</td>
-                                            <td class="px-5 py-2">20/90/2022</td>
-                                            <td class="px-5 py-2">8.29</td>
-                                            <td class="px-5 py-2">35</td>
-                                        </tr>
+                                        <?php
+                                        include_once './../../../config/get_data_perjalanan/index.php';
+                                        $no = 1;
+                                        foreach ($data as $perjalanan) :
+                                        ?>
+                                            <tr>
+                                                <td class="px-5 py-2"><?= $no ?></td>
+                                                <td class="px-5 py-2"><?= $perjalanan['tanggal'] ?></td>
+                                                <td class="px-5 py-2"><?= $perjalanan['waktu'] ?></td>
+                                                <td class="px-5 py-2"><?=$perjalanan['suhu_tubuh']?></td>
+                                            </tr>
+                                        <?php
+                                            $no++;
+                                        endforeach;
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>

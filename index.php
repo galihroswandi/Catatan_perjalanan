@@ -19,7 +19,7 @@
     <div class="login-wrapper">
         <div class="wrapper py-2 px-3">
             <div class="header mt-1">
-                <h1 class="text-center fs-1 my-4 fw-semibold">Login</h1>
+                <h1 class="text-center fs-1 my-4 fw-semibold">Masuk</h1>
             </div>
             <div class="body mt-4">
                 <div class="container">

@@ -65,7 +65,7 @@
                                 <input type="date" name="tanggal" id="tanggal" placeholder="Tanggal" class="py-3 px-4" autocomplete="off">
                             </div>
                             <div class="form-input">
-                                <input type="text" name="jam" id="jam" placeholder="Jam" class="py-3 px-4">
+                                <input type="time" name="jam" id="jam" placeholder="Jam" class="py-3 px-4">
                             </div>
                             <div class="form-input">
                                 <input type="text" name="lokasi" id="lokasi" placeholder="Lokasi Yang Dikunjungi" class="py-3 px-4" autocomplete="off">

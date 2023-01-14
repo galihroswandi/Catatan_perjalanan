@@ -8,7 +8,7 @@ if ($_POST) {
     $jam = mysqli_real_escape_string($conn, $_POST['jam']);
     $lokasiDikunjungi = mysqli_real_escape_string($conn, $_POST['lokasi']);
     $suhu_tubuh = mysqli_real_escape_string($conn, $_POST['suhu-tubuh']);
-    $id_user = mysqli_real_escape_string($conn, $_SESSION['user']);
+    $id_user = mysqli_real_escape_string($conn, $_SESSION['id_user']);
 
     $query = "INSERT INTO catatan_perjalanan VALUES('', '{$id_user}', '{$tanggal}', '{$jam}', '{$lokasiDikunjungi}', '{$suhu_tubuh}')";
 
