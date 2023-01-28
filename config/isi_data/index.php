@@ -18,5 +18,7 @@ if ($_POST) {
                 alert('Data Berhasil Ditambahkan !');
                 location.href = '../../container/pages/perjalanan/index.php';
             </script>";
+    } else {
+        echo mysqli_error($conn);
     }
 }
