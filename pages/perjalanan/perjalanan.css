@@ -1,0 +1,106 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-primary: #5272da;
+    --light-color: #edf2f4;
+    --light-primary: #6f89ca;
+}
+
+section {
+    background: url("./../../assets/img/bg-blur-dashboard.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    padding-bottom: 5rem;
+}
+
+section>.navbar {
+    background-color: rgba(111, 137, 202, 0.15);
+    box-shadow: 0 0 32px #fff;
+}
+
+section>.navbar>.container>.navbar-brand>img {
+    margin-top: -1rem;
+}
+
+section>.navbar>.container>.navbar-brand>p {
+    color: var(--bg-primary);
+}
+
+section>.navbar>.container>.navbar-brand>p>span {
+    color: var(--light-primary);
+}
+
+section>.navbar>.container>.nav-link>ul>li {
+    list-style: none;
+}
+
+section>.navbar>.container>.nav-link>ul>li>a {
+    font-size: 18px;
+    font-weight: 400 !important;
+    color: var(--light-primary);
+}
+
+section>.navbar>.container>.nav-link>ul>li>div {
+    height: 0.2rem;
+    width: 80%;
+    background-color: var(--light-primary);
+    border-radius: 5rem;
+}
+
+main>.container>.table-wrapper {
+    min-height: 50vh;
+    background-color: rgba(111, 137, 202, 0.2);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
+    border-radius: 10px 10px 40px 40px;
+    margin-bottom: 5rem;
+}
+
+main>.container>.table-wrapper>.header {
+    background: rgba(82, 114, 218, 0.2);
+    border-radius: 10px 10px 40px 40px;
+    padding: 0.6rem 0;
+}
+
+main>.container>.table-wrapper>.header>h1 {
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--light-primary);
+}
+
+main>.container>.table-wrapper>.main>.container>.row>.col-6>form>select {
+    background-color: var(--bg-primary);
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+main>.container>.table-wrapper>.main>.container>.row>.col-6>form>select>option {
+    margin: 0.6rem 0;
+}
+
+main>.container>.table-wrapper>.main>.container>.row>.col-6>a {
+    background-color: var(--bg-primary);
+}
+
+main>.container>.table-wrapper>.main>.container>.table {
+    background-color: var(--light-color);
+    max-width: 80%;
+    margin-inline: auto;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 32px rgba(82, 114, 218, 0.3);
+    overflow: hidden;
+}
+
+main>.container>.table-wrapper>.main>.container>.table>table>thead {
+    background-color: var(--light-primary);
+    color: var(--light-color);
+}

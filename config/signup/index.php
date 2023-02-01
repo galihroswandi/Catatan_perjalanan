@@ -8,6 +8,6 @@ $sql = mysqli_query($conn, "INSERT INTO users VALUES ('', '{$nik}', '{$nama}')")
 if ($sql) {
     echo "<script>
         alert('Data Berhasil Ditambahkan !');
-        document.location.href = '../../container/pages/signup/index.php';
+        document.location.href = '/';
     </script>";
 }

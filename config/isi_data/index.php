@@ -1,6 +1,5 @@
 <?php
-session_start();
-include_once "./../config.php";
+include_once "./config/config.php";
 
 if ($_POST) {
 
@@ -8,7 +7,7 @@ if ($_POST) {
     $jam = mysqli_real_escape_string($conn, $_POST['jam']);
     $lokasiDikunjungi = mysqli_real_escape_string($conn, $_POST['lokasi']);
     $suhu_tubuh = mysqli_real_escape_string($conn, $_POST['suhu-tubuh']);
-    $id_user = mysqli_real_escape_string($conn, $_SESSION['id_user']);
+    $id_user = mysqli_real_escape_string($conn, $_COOKIE['user']);
 
     $query = "INSERT INTO catatan_perjalanan VALUES('', '{$id_user}', '{$tanggal}', '{$jam}', '{$lokasiDikunjungi}', '{$suhu_tubuh}')";
 
@@ -16,7 +15,7 @@ if ($_POST) {
     if ($sql) {
         echo "<script>
                 alert('Data Berhasil Ditambahkan !');
-                location.href = '../../container/pages/perjalanan/index.php';
+                location.href = '?p=perjalanan';
             </script>";
     } else {
         echo mysqli_error($conn);
