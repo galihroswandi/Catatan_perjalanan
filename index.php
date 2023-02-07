@@ -24,11 +24,7 @@ if (!empty($_GET)) {
             }
             break;
         case 'signup':
-            if (!isset($_COOKIE['user'])) {
-                include_once './pages/login/index.php';
-            } else {
-                include_once './pages/' . $_GET['p'] . '/index.php';
-            }
+            include_once './pages/' . $_GET['p'] . '/index.php';
             break;
         default:
             echo '<h2>Page Not Found</h2>';

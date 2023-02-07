@@ -1,5 +1,9 @@
 <?php
-include_once './config/isi_data/index.php';
+if(isset($_GET['id_perjalanan'])){
+    include "./config/getSingleData/index.php";
+}else{
+    include_once './config/isi_data/index.php';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,25 +62,25 @@ include_once './config/isi_data/index.php';
         <div class="container">
             <div class="form-wrapper mt-5 pb-4">
                 <div class="header px-auto">
-                    <h1 class="text-center">Isi Catatan Perjalanan</h1>
+                    <h1 class="text-center"><?=!isset($_GET['id_perjalanan']) ? 'Isi' : 'Ubah';?> Catatan Perjalanan</h1>
                 </div>
                 <div class="main">
                     <form action="#" method="POST">
                         <div class="d-flex flex-column align-items-center d-grid gap-3">
                             <div class="form-input">
-                                <input type="date" name="tanggal" id="tanggal" placeholder="Tanggal" class="py-3 px-4" autocomplete="off">
+                                <input type="date" name="tanggal" id="tanggal" placeholder="Tanggal" class="py-3 px-4" autocomplete="off" value="<?=!isset($_GET['id_perjalanan']) ? null : $result['tanggal']?>">
                             </div>
                             <div class="form-input">
-                                <input type="time" name="jam" id="jam" placeholder="Jam" class="py-3 px-4">
+                                <input type="time" name="jam" id="jam" placeholder="Jam" class="py-3 px-4"  value="<?=!isset($_GET['id_perjalanan']) ? null : $result['waktu']?>">
                             </div>
                             <div class="form-input">
-                                <input type="text" name="lokasi" id="lokasi" placeholder="Lokasi Yang Dikunjungi" class="py-3 px-4" autocomplete="off">
+                                <input type="text" name="lokasi" id="lokasi" placeholder="Lokasi Yang Dikunjungi" class="py-3 px-4" autocomplete="off"  value="<?=!isset($_GET['id_perjalanan']) ? null : $result['lokasi']?>">
                             </div>
                             <div class="form-input">
-                                <input type="text" name="suhu-tubuh" id="suhu-tubuh" placeholder="Suhu Tubuh" class="py-3 px-4" autocomplete="off">
+                                <input type="text" name="suhu-tubuh" id="suhu-tubuh" placeholder="Suhu Tubuh" class="py-3 px-4" autocomplete="off"  value="<?=!isset($_GET['id_perjalanan']) ? null : $result['suhu_tubuh']?>">
                             </div>
                             <div class="form-input mt-4 d-flex d-grid gap-3">
-                                <button type="submit" class="btn text-white py-2 px-4">Simpan</button>
+                                <button type="submit" class="btn text-white py-2 px-4"><?=!isset($_GET['id_perjalanan']) ? 'Simpan' : 'Ubah'?></button>
                                 <a href="?p=perjalanan" class="btn py-2 px-4 text-white">Batal</a>
                             </div>
                         </div>

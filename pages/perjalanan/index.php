@@ -85,6 +85,7 @@ include "./config/get_data_perjalanan/index.php";
                                             <th class="px-5 py-2">Tanggal</th>
                                             <th class="px-5 py-2">Waktu</th>
                                             <th class="px-5 py-2">Suhu Tubuh</th>
+                                            <th class="px-5 py-2">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -98,6 +99,10 @@ include "./config/get_data_perjalanan/index.php";
                                                     <td class="px-5 py-2"><?= $perjalanan['tanggal'] ?></td>
                                                     <td class="px-5 py-2"><?= $perjalanan['waktu'] ?></td>
                                                     <td class="px-5 py-2"><?= $perjalanan['suhu_tubuh'] ?></td>
+                                                    <td class="px-5 py-2">
+                                                        <a href="?p=isi_data&id_perjalanan=<?=$perjalanan['id_perjalanan']?>">Ubah</a> ||
+                                                        <a onclick="return confirm('Apakah yakin ingin menghapus')" href="?p=del&id_perjalanan=<?=$perjalanan?>">Hapus</a>
+                                                    </td>
                                                 </tr>
                                         <?php
                                                 $no++;

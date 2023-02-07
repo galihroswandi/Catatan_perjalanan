@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2022 at 05:17 AM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 8.0.9
+-- Waktu pembuatan: 07 Feb 2023 pada 02.55
+-- Versi server: 10.4.22-MariaDB
+-- Versi PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `catatan_perjalanan`
+-- Struktur dari tabel `catatan_perjalanan`
 --
 
 CREATE TABLE `catatan_perjalanan` (
@@ -32,13 +32,14 @@ CREATE TABLE `catatan_perjalanan` (
   `id_user` int(11) NOT NULL,
   `tanggal` date NOT NULL,
   `waktu` varchar(255) NOT NULL,
+  `lokasi` varchar(50) NOT NULL,
   `suhu_tubuh` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -48,44 +49,51 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data untuk tabel `users`
+--
+
+INSERT INTO `users` (`id_user`, `NIK`, `nama_lengkap`) VALUES
+(1, '123456', 'galihroswandi');
+
+--
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `catatan_perjalanan`
+-- Indeks untuk tabel `catatan_perjalanan`
 --
 ALTER TABLE `catatan_perjalanan`
   ADD PRIMARY KEY (`id_perjalanan`),
   ADD KEY `id_user` (`id_user`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `catatan_perjalanan`
+-- AUTO_INCREMENT untuk tabel `catatan_perjalanan`
 --
 ALTER TABLE `catatan_perjalanan`
   MODIFY `id_perjalanan` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `catatan_perjalanan`
+-- Ketidakleluasaan untuk tabel `catatan_perjalanan`
 --
 ALTER TABLE `catatan_perjalanan`
   ADD CONSTRAINT `catatan_perjalanan_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`);
