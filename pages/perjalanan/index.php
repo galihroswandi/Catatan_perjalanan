@@ -46,6 +46,11 @@ include "./config/get_data_perjalanan/index.php";
                         <li>
                             <a href="?p=isi_data" class="text-decoration-none">Isi Data</a>
                         </li>
+                        <li>
+                            <a onclick="return confirm('Apakah yakin ingin keluar ?')" href="?con=logout">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -101,14 +106,14 @@ include "./config/get_data_perjalanan/index.php";
                                                     <td class="px-5 py-2"><?= $perjalanan['suhu_tubuh'] ?></td>
                                                     <td class="px-5 py-2">
                                                         <a href="?p=isi_data&id_perjalanan=<?=$perjalanan['id_perjalanan']?>">Ubah</a> ||
-                                                        <a onclick="return confirm('Apakah yakin ingin menghapus')" href="?p=del&id_perjalanan=<?=$perjalanan?>">Hapus</a>
+                                                        <a onclick="return confirm('Apakah yakin ingin menghapus')" href="?con=delete&id_perjalanan=<?=$perjalanan['id_perjalanan']?>">Hapus</a>
                                                     </td>
                                                 </tr>
                                         <?php
                                                 $no++;
                                             endforeach;
                                         } else {
-                                            echo "<tr><td colspan='4'><h6 class='text-center'>No data on this page</h6></td></tr>";
+                                            echo "<tr><td colspan='5'><h6 class='text-center'>No data on this page</h6></td></tr>";
                                         }
                                         ?>
                                     </tbody>

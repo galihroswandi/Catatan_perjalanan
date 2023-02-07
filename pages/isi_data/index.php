@@ -1,7 +1,7 @@
 <?php
-if(isset($_GET['id_perjalanan'])){
+if (isset($_GET['id_perjalanan'])) {
     include "./config/getSingleData/index.php";
-}else{
+} else {
     include_once './config/isi_data/index.php';
 }
 ?>
@@ -53,6 +53,15 @@ if(isset($_GET['id_perjalanan'])){
                         <a href="?p=isi_data" class="text-decoration-none">Isi Data</a>
                         <div></div>
                     </li>
+                    <li>
+                        <a onclick="return confirm('Apakah yakin ingin keluar ?')" href="?con=logout">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16 17 21 12 16 7"></polyline>
+                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                            </svg>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -62,25 +71,25 @@ if(isset($_GET['id_perjalanan'])){
         <div class="container">
             <div class="form-wrapper mt-5 pb-4">
                 <div class="header px-auto">
-                    <h1 class="text-center"><?=!isset($_GET['id_perjalanan']) ? 'Isi' : 'Ubah';?> Catatan Perjalanan</h1>
+                    <h1 class="text-center"><?= !isset($_GET['id_perjalanan']) ? 'Isi' : 'Ubah'; ?> Catatan Perjalanan</h1>
                 </div>
                 <div class="main">
                     <form action="#" method="POST">
                         <div class="d-flex flex-column align-items-center d-grid gap-3">
                             <div class="form-input">
-                                <input type="date" name="tanggal" id="tanggal" placeholder="Tanggal" class="py-3 px-4" autocomplete="off" value="<?=!isset($_GET['id_perjalanan']) ? null : $result['tanggal']?>">
+                                <input type="date" name="tanggal" id="tanggal" placeholder="Tanggal" class="py-3 px-4" autocomplete="off" value="<?= !isset($_GET['id_perjalanan']) ? null : $result['tanggal'] ?>">
                             </div>
                             <div class="form-input">
-                                <input type="time" name="jam" id="jam" placeholder="Jam" class="py-3 px-4"  value="<?=!isset($_GET['id_perjalanan']) ? null : $result['waktu']?>">
+                                <input type="time" name="jam" id="jam" placeholder="Jam" class="py-3 px-4" value="<?= !isset($_GET['id_perjalanan']) ? null : $result['waktu'] ?>">
                             </div>
                             <div class="form-input">
-                                <input type="text" name="lokasi" id="lokasi" placeholder="Lokasi Yang Dikunjungi" class="py-3 px-4" autocomplete="off"  value="<?=!isset($_GET['id_perjalanan']) ? null : $result['lokasi']?>">
+                                <input type="text" name="lokasi" id="lokasi" placeholder="Lokasi Yang Dikunjungi" class="py-3 px-4" autocomplete="off" value="<?= !isset($_GET['id_perjalanan']) ? null : $result['lokasi'] ?>">
                             </div>
                             <div class="form-input">
-                                <input type="text" name="suhu-tubuh" id="suhu-tubuh" placeholder="Suhu Tubuh" class="py-3 px-4" autocomplete="off"  value="<?=!isset($_GET['id_perjalanan']) ? null : $result['suhu_tubuh']?>">
+                                <input type="text" name="suhu-tubuh" id="suhu-tubuh" placeholder="Suhu Tubuh" class="py-3 px-4" autocomplete="off" value="<?= !isset($_GET['id_perjalanan']) ? null : $result['suhu_tubuh'] ?>">
                             </div>
                             <div class="form-input mt-4 d-flex d-grid gap-3">
-                                <button type="submit" class="btn text-white py-2 px-4"><?=!isset($_GET['id_perjalanan']) ? 'Simpan' : 'Ubah'?></button>
+                                <button type="submit" class="btn text-white py-2 px-4" name="<?= !isset($_GET['id_perjalanan']) ? 'simpan' : 'ubah'; ?>"><?= !isset($_GET['id_perjalanan']) ? 'Simpan' : 'Ubah' ?></button>
                                 <a href="?p=perjalanan" class="btn py-2 px-4 text-white">Batal</a>
                             </div>
                         </div>

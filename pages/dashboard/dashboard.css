@@ -49,6 +49,10 @@ section>.navbar>.container>.nav-link>ul>li>a {
     color: var(--light-primary);
 }
 
+section>.navbar>.container>.nav-link>ul>li>a>img{
+    color: var(--bg-primary);
+}
+
 section>.navbar>.container>.nav-link>ul>li>div {
     height: 0.2rem;
     width: 80%;
