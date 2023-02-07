@@ -7,5 +7,8 @@ $sql = mysqli_query($conn, $query);
 $result = mysqli_fetch_assoc($sql);
 
 if(isset($_POST)){
-    var_dump(($_POST));
+    $tanggal = mysqli_real_escape_string($conn, $_POST['tanggal']);
+    $jam = mysqli_real_escape_string($conn, $_POST['jam']);
+    $lokasi = mysqli_real_escape_string($conn, $_POST['lokasi']);
+    $suhu_tubuh = mysqli_real_escape_string($conn, $_POST['suhu-tubuh']);
 }
